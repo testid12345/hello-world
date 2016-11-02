@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IBM SVT</title>
+	<h1><font color="white">SVT Bluemix App</font></h1>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript">
+	  function nname() {
+	    var fname = document.getElementById("first_name");
+	    var lname = document.getElementById("last_name");
+	    var fcolor = document.getElementById("f_color");
+	    var fhobby = document.getElementById("f_hobby");
+	    var fmovie = document.getElementById("f_movie");
+	    var ffood = document.getElementById("f_food");
+		var vfname = fname.value;
+		var vlname = lname.value;
+		
+		var full_name = document.getElementById("full_name");
+		full_name.value = vfname + " " + vlname;
+		var outputStr = document.getElementById("outputstr");
+		outputStr.value = full_name.value + " like to watch '" + fmovie.value 
+		                  + "' over and over again while eating " + ffood.value 
+						  + ".\n"  + full_name.value + " also like the color " + fcolor.value
+						  + " and spend free time " + fhobby.value + ".";
+	  }
+	  
+	  function ping() {
+	    var hinfo = document.getElementById("hostinfo");
+		var ping_result = document.getElementById("ping_result");
+		ping_results = "ping " + hinfo;
+	  }
+	  </script>
+  </head>
+  <body>
+	<form action="/" method="GET"> 
+	  <div>
+	    <table style="width:100%">
+          <tr>
+		    <td style="width:10%">First Name:</td> 
+			<td><input type="text" id="first_name"/>  </td>
+	      </tr>
+          <tr>
+		    <td>Last Name: </td> 
+			<td><input type="text" id="last_name"/>   </td>
+		  </tr>
+          <tr>
+		    <td>Favorite color:  </td> 
+			<td><input type="text" id="f_color"/>   </td>
+		  </tr>
+          <tr>
+		    <td>Favorit hobby:  </td> 
+			<td><input type="text" id="f_hobby"/>   </td>
+		  </tr>
+          <tr>
+		    <td>Favorite food:  </td> 
+			<td><input type="text" id="f_food"/>   <br>
+		  </tr>
+          <tr>
+		    <td>Favorite movie:  </td> 
+			<td><input type="text" id="f_movie"/>   <br>
+		  </tr>
+		  <tr><td><input type="button" value="Submit" onclick = "nname()"/></td></tr>
+		</table>
+	    <br>
+		<table style="width:100%">
+	      <tr>
+		    <td style="width:10%">Name: </td>
+		    <td><output type="text" id="full_name"/> </td>
+		  </tr>
+		  <tr>
+		    <td>Output:</td>
+			<td><output type="text" id="outputstr"/> </td>
+		  </tr>
+		</table>
+	  </div>
+	</form>
+  </body>
+</html>

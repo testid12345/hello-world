@@ -1,0 +1,7 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  name: favsurvey
+  host: favsurvey
+  disk_quota: 1024M
